@@ -29,8 +29,8 @@ function DigitalClock() {
         // Convert 24-hour time to 12-hour format and handle the case where 12 is displayed as "12".
         hours = hours % 12 || 12;
         // Zero-pad minutes and seconds so they always appear as two digits.
-        minutes = minutes < 10 ? `0${minutes}` : minutes;
-        seconds = seconds < 10 ? `0${seconds}` : seconds;
+        minutes = minutes < 10 ? `${minutes}` : minutes;
+        seconds = seconds < 10 ? `${seconds}` : seconds;
 
         // Return the formatted time string in the format "hh:mm:ss AM/PM".
         return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`;
