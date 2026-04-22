@@ -6,6 +6,10 @@ import react from '@vitejs/plugin-react'
 // subpath, including a GitHub Pages project URL like
 // https://<user>.github.io/<repo>/.
 export default defineConfig({
-  base: './',
+  base: '/my-react-app/',
   plugins: [react()],
+  build: {
+    outDir: '../docs',
+    emptyOutDir: true,
+  },
 })
